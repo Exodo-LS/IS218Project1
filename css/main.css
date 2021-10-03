@@ -15,17 +15,185 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  font-family: Calibri;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+.brand-logo {
+  max-width: 75px;
+  float: left;
+  padding: 0 10%;
+}
+.brand-logo img {
+  max-width: 200%;
+}
+
+/* Add color to the background of the top navigation */
+.topnav {
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 10%;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  margin-right: -4px;
+  color: #5e5e5e;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  -webkit-transition: background 0.1s linear;
+  -moz-transition: background 0.1s linear;
+  -ms-transition: background 0.1s linear;
+  -o-transition: background 0.1s linear;
+   transition: background 0.1s linear;
+   z-index: 9;
+}
+
+/* Logo size and placing */
+.topnav img {
+  height: auto;
+  width: auto;
+  max-width: 125px;
+  max-height: 75px;
+  display: block;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* nav hover effect */
+.topnav a:hover {
+  background-color: #e4e8e3;
+  color: #bdfe0e2;
+  border-bottom-width: fit-content;
+  line-height: 5px;
+  border-bottom: 2px solid #5e5e5e;
+}
+
+/* When the screen is less than 820 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1360px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1360px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+/*    right: 0;
+      top: 0;*/
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+.welcometxt {
+  background-color: white;
+  padding: 0 10%;
+  color: #5e5e5e;
+}
+
+.welcometxt h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.welcometxt p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.tabsection {
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
+
+/* Style the tab buttons */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 18px;
+  width: 25%;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.tabcontent p {
+  font-size: 18px;
+}
+
+/* Change background color of buttons on hover */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  text-align: center;
+  padding: 50px;
+}
+
+/* Style each tab content individually */
+#London {background-color:#69c460;}
+#Paris {background-color:#60a1c4;}
+#Tokyo {background-color:#cf7e7e;}
+#Oslo {background-color:#dbb465;}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* closing words */
+.closingwords {
+  float: left;
+  color: #5e5e5e;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0.75;}
+  to {opacity: 1;}
+}
+
 
 ::-moz-selection {
   background: #b3d4fc;

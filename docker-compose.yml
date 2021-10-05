@@ -2,7 +2,7 @@ version: '3.2'
 services:
   frontend:
     build: .
-    image: <<username>>/IS218Project1
+    image: <<username>>/is218project
     ports:
       - "80:80"
     depends_on:

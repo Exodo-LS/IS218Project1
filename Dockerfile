@@ -1,2 +1,3 @@
-FROM httpd:2.4
-COPY ./public_html/ /usr/local/apache2/htdocs/
+FROM nginx:latest
+COPY ./public_html/ /usr/share/nginx/html
+

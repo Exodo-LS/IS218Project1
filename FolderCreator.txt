@@ -1,1 +1,0 @@
-Simply to create the public_folder

@@ -1,12 +1,12 @@
-version: '3.2'
 services:
-  frontend:
-    build: .
-    image: <<username>>/is218project
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
-
-  backend:
+  nginx:
     image: nginx
+    domainname: "myapp"
+    build: .
+    volumes:
+     - ./public_html:/usr/share/nginx/html/
+    ports:
+     - "80:80"
+    environment:
+     - NGINX_HOST=foobar.com
+     - NGINX_PORT=80

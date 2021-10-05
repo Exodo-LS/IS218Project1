@@ -127,6 +127,39 @@ html {
   margin-bottom: 20px;
 }
 
+/* git page txt*/
+.ghtxt {
+  float: left;
+  color: #5e5e5e;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
+
+.ghtxt2 {
+  float: left;
+  color: #5e5e5e;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-bottom: 0;
+}
+
+.emptyspace {
+  float: left;
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-bottom: 5%;
+}
+.dt {
+  float: left;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 0;
+}
 .tabsection {
   margin-top: 0;
   margin-left: 10%;

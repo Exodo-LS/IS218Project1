@@ -1,12 +1,11 @@
 services:
-  nginx:
-    image: nginx
-    domainname: "myapp"
+  frontend:
     build: .
-    volumes:
-     - ./public_html:/usr/share/nginx/html/
+    image: ma2298/is218project
     ports:
-     - "80:80"
-    environment:
-     - NGINX_HOST=foobar.com
-     - NGINX_PORT=80
+      - "80:80"
+    depends_on:
+      - backend
+      
+  backend:
+    image: nginx
